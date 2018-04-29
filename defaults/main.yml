@@ -1,7 +1,18 @@
 ---
-# defaults file for kodi-mysql
-kodi_mysql_enabled: True
+# defaults file for kodi
+kodi_mysql_enabled: yes
 
+kodi_config_path: "/home/{{ htpc_user_username }}/.kodi/"
+kodi_device_name: "kodi"
 kodi_mysqldb_host: "{{ ansible_default_ipv4.address }}"
-kodi_mysqldb_user: kodi
-kodi_mysqldb_password: kodi
+kodi_mysqldb_user: "{{ htpc_user_username }}"
+kodi_mysqldb_password: "{{ htpc_user_password }}"
+kodi_airplay: false
+kodi_airplay_password: "{{ htpc_user_password }}"
+kodi_esallinterfaces: true
+kodi_upnp: false
+kodi_webserver: true
+kodi_webserver_port: 8080
+kodi_web_server_username: "{{ htpc_user_username }}"
+kodi_web_server_password: "{{ htpc_user_password }}"
+kodi_zeroconf: true
