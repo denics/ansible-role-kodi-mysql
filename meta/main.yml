@@ -1,15 +1,20 @@
 ---
 galaxy_info:
-  author: Gregory Shulov
-  description: Configure and Install Mysql Database for Kodi
+  author: Denis Pitzalis
+  description: Configure and Install Kodi with Mysql support
   license: BSD
-  min_ansible_version: 2.0
+  
+  min_ansible_version: 2.4
+
   platforms:
-  - name: Ubuntu
-    versions:
-      - trusty
+    - name: Raspbian
+      versions:
+      - stretch
+  
   galaxy_tags:
     - htpc
     - system
+    - rpi
+
 dependencies:
-  - GR360RY.htpc-common
+- denics.htpc-common

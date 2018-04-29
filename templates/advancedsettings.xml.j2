@@ -1,0 +1,59 @@
+<advancedsettings>
+  <videodatabase>
+    <type>mysql</type>
+    <host>{{ kodi_mysqldb_host }}</host>
+    <port>3306</port>
+    <user>{{ kodi_mysqldb_user }}</user>
+    <pass>{{ kodi_mysqldb_password }}</pass>
+  </videodatabase> 
+  <musicdatabase>
+    <type>mysql</type>
+    <host>{{ kodi_mysqldb_host }}</host>
+    <port>3306</port>
+    <user>{{ kodi_mysqldb_user }}</user>
+    <pass>{{ kodi_mysqldb_password }}</pass>
+  </musicdatabase>
+  <videolibrary>
+    <importwatchedstate>true</importwatchedstate>
+    <importresumepoint>true</importresumepoint>
+  </videolibrary>
+  <services>
+        <webserver>true</webserver>
+  </services>
+  <scrapers>
+    <moviesdefault>metadata.themoviedb.org</moviesdefault>
+    <tvshowsdefault>metadata.tvdb.com</tvshowsdefault>
+  </scrapers>
+  <musiclibrary>
+    <updateonstartup>true</updateonstartup>
+    <albumsscraper default="true">metadata.album.universal</albumsscraper>
+    <artistsscraper default="true">metadata.artists.universal</artistsscraper>
+    <backgroundupdate default="true">false</backgroundupdate>
+    <downloadinfo>true</downloadinfo>
+    <overridetags>true</overridetags>
+    <showallitems default="true">true</showallitems>
+    <showcompilationartists default="true">true</showcompilationartists>
+  </musiclibrary>
+  <cache>
+    <buffermode>0</buffermode>
+    <memorysize>0</memorysize>
+    <readfactor>30</readfactor>
+  </cache>
+  <services>
+        <airplay default="true">{{ kodi_airplay }}</airplay>
+        <airplaypassword default="true">{{ kodi_airplay_password }}</airplaypassword>
+        <devicename>{{ kodi_device_name }}</devicename>
+        <esallinterfaces>{{ kodi_esallinterfaces }}</esallinterfaces>
+        <upnpserver default="true">{{ kodi_upnp }}</upnpserver>
+        <webserver>{{ kodi_webserver }}</webserver>
+        <webserverpassword default="true">{{ kodi_web_server_password }}</webserverpassword>
+        <webserverport default="true">{{ kodi_webserver_port }}</webserverport>
+        <webserverusername default="true">{{ kodi_web_server_username }}</webserverusername>
+        <zeroconf default="true">{{ kodi_zeroconf }}</zeroconf>
+    </services>
+    <smb>
+        <maxprotocol default="true">0</maxprotocol>
+        <winsserver default="true">0.0.0.0</winsserver>
+        <workgroup>{{ htpc_nas_samba_domain }}</workgroup>
+    </smb>
+</advancedsettings>

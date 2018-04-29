@@ -1,0 +1,17 @@
+[Unit]
+Description = Kodi Media Center
+
+# wait for MySQL DB backend
+After = systemd-user-sessions.service network.target sound.target mysql.service
+Wants = mysql.service
+
+[Service]
+User = {{ htpc_user_username }}
+Group = {{ htpc_user_group }}
+Type = simple
+ExecStart = /usr/bin/kodi-standalone
+Restart = always
+RestartSec = 15
+
+[Install]
+WantedBy = multi-user.target
