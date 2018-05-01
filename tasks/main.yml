@@ -36,6 +36,6 @@
   template: src=kodi.service.j2 dest=/etc/systemd/system/kodi.service
 
 - name: start kodi
-  systemd: state=started name=kodi daemon_reload=yes
+  systemd: name=kodi state=started enabled=yes daemon_reload=yes
 
 - meta: flush_handlers
